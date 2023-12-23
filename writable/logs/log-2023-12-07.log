@@ -1,0 +1,32 @@
+ERROR - 2023-12-07 14:22:36 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\marketplace-api\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\marketplace-api\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\marketplace-api\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\marketplace-api\app\Controllers\RegistrasiController.php(18): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(942): App\Controllers\RegistrasiController->registrasi()
+#10 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
+#11 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\marketplace-api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-12-07 14:26:20 --> mysqli_sql_exception: Column 'nama' cannot be null in C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\marketplace-api\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\marketplace-api\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\marketplace-api\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\marketplace-api\app\Controllers\RegistrasiController.php(18): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(942): App\Controllers\RegistrasiController->registrasi()
+#10 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistrasiController))
+#11 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\marketplace-api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}

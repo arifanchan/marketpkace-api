@@ -1,0 +1,118 @@
+ERROR - 2023-12-10 14:37:15 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'rental_api', 3306, '', 0)
+#1 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\marketplace-api\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\marketplace-api\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\marketplace-api\app\Controllers\LoginController.php(14): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(942): App\Controllers\LoginController->login()
+#8 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#9 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\marketplace-api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\marketplace-api\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\marketplace-api\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\marketplace-api\app\Controllers\LoginController.php(14): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(942): App\Controllers\LoginController->login()
+#7 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\marketplace-api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-10 14:37:15 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\LoginController.php(14): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\LoginController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-10 14:43:37 --> mysqli_sql_exception: Column 'tipe_mobil' cannot be null in C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\xampp\htdocs\marketplace-api\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\xampp\htdocs\marketplace-api\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\marketplace-api\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\marketplace-api\app\Controllers\MobilController.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(942): App\Controllers\MobilController->create()
+#9 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobilController))
+#10 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\marketplace-api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-12-10 14:51:09 --> mysqli_sql_exception: Column 'tipe_mobil' cannot be null in C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\xampp\htdocs\marketplace-api\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\xampp\htdocs\marketplace-api\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\marketplace-api\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\marketplace-api\app\Controllers\MobilController.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(942): App\Controllers\MobilController->create()
+#9 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobilController))
+#10 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\marketplace-api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-12-10 15:03:46 --> mysqli_sql_exception: Column 'tipe_mobil' cannot be null in C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\xampp\htdocs\marketplace-api\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\xampp\htdocs\marketplace-api\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\marketplace-api\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\marketplace-api\app\Controllers\MobilController.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(942): App\Controllers\MobilController->create()
+#9 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobilController))
+#10 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\marketplace-api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-12-10 15:08:07 --> mysqli_sql_exception: Column 'tipe_mobil' cannot be null in C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\xampp\htdocs\marketplace-api\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\xampp\htdocs\marketplace-api\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\marketplace-api\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\marketplace-api\app\Controllers\MobilController.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(942): App\Controllers\MobilController->create()
+#9 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobilController))
+#10 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\marketplace-api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-12-10 15:10:02 --> mysqli_sql_exception: Column 'tipe_mobil' cannot be null in C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\marketplace-api\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `mo...', 0)
+#1 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mo...')
+#2 C:\xampp\htdocs\marketplace-api\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mo...')
+#3 C:\xampp\htdocs\marketplace-api\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mo...', Array, false)
+#4 C:\xampp\htdocs\marketplace-api\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\marketplace-api\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\marketplace-api\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\marketplace-api\app\Controllers\MobilController.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(942): App\Controllers\MobilController->create()
+#9 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobilController))
+#10 C:\xampp\htdocs\marketplace-api\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\marketplace-api\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
